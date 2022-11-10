@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+    <title>Enlaces LibLink</title>
+</head>
+
+<body>
+    <div id="title">
+        <h1>Enlaces instituciones del convenio ISTEC LibLink</h1>
+    </div>
+    <form name="country">
+        <select name="pais" id="pais">
+            <option value="argentina">Argentina</option>
+            <option value="bolivia">Bolivia</option>
+            <option value="brasil">Brasil</option>
+            <option value="chile">Chile</option>
+            <option value="colombia">Colombia</option>
+            <option value="costa rica">Costa Rica</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="el salvador">El Salvador</option>
+            <option value="españa">España</option>
+            <option value="estados unidos">Estados Unidos</option>
+            <option value="honduras">Honduras</option>
+            <option value="mexico">México</option>
+            <option value="nicaragua">Nicaragua</option>
+            <option value="panama">Panama</option>
+            <option value="paraguay">Paraguay</option>
+            <option value="peru">Perú</option>
+            <option value="puerto rico">Puerto Rico</option>
+            <option value="republica dominica">Republica Dominica</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="venezuela">venezuela</option>
+        </select>
+        <input type=button value="Buscar" onclick="muestra()">
+    </form>
+    <div id="headercontainer">
+    </div>
+    <br>
+    <div id="tablecontainer">
+        <span id="argentina" class="oculto">
+            <h2>Argentina</h2>
+                <p>Comisión Nacional de Energía Atómica. CNEA</p>
+                <a href="http://biblioteca.cab.cnea.gov.ar/" target="_blank">Biblioteca</a>
+                <br>
+                <p>Universidad Abierta Interamericana -UAI-</p>
+                <a href="https://biblioteca.vaneduc.edu.ar/#/" target="_blank">Biblioteca</a>
+                </br>
+                <p>Universidad Blas Pascal. UBP</p>
+                <a href="https://www.ubp.edu.ar/biblioteca/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblio.ubp.edu.ar/" target="_blank">Catálogo</a>
+                <br>
+                <p>Universidad Nacional de La Plata. UNLP </p>
+                <a href="http://opac.biblio.unlp.edu.ar/opac/cgi-bin/pgopac.cgi?form=Default">Biblioteca</a>
+                <br>
+                <p>Universidad Nacional del Noroeste de la Provincia de Buenos Aires UNNOBA</p>
+                <a href="http://biblioteca.unnoba.edu.ar/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="http://biblioteca.unnoba.edu.ar/cgi-bin/koha/opac-main.pl" target="_blank">Catálogo</a>
+                <br>
+                <p>Universidad Nacional de las Misiones (UNaM), Facultad de humanidades y ciencias
+                    sociales </p>
+                <a href="https://opac.fhycs.unam.edu.ar/" target="_blank">Biblioteca</a>
+                <br>
+                <p>Facultad de ciencias exactas, químicas y naturales </p>
+                <a href="https://www.fceqyn.unam.edu.ar/biblioteca/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblio-opac.fceqyn.unam.edu.ar/" target="_blank">Catálogo</a>
+                <br>
+                <p>Facultad de ingeniería</p>
+                <a href="https://biblioteca.fio.unam.edu.ar/cgi-bin/koha/opac-search.pl" target="_blank">Biblioteca</a>
+                <p>Facultad de Artes</p>
+                <a href="https://biblioteca.fio.unam.edu.ar/cgi-bin/koha/opac-main.pl" target="_blank">Biblioteca</a>
+                <br>
+                <p>Facultad de Ciencias de la Salud</p>
+                <a href="http://bvs.escenf.unam.edu.ar/" target="_blank">Biblioteca</a>
+                <br>
+                <p>Universidad de Palermo -UP-</p>
+                <a href="https://www.palermo.edu/biblioteca/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="http://biblio.palermo.edu/EOSWebOPAC/OPAC/Index.aspx" target="_blank">Catálogo</a>
+                <br>
+                <p>Universidad Tecnológica Nacional UTN</p>
+                <a href="https://biblioteca.frba.utn.edu.ar/opac_principal_sin_log.php" target="_blank">Biblioteca</a>
+        </span>
+        <span id="bolivia" class="oculto">
+            <h2>Bolivia</h2>
+                <p>Universidad Privada Santa Cruz de la Sierra </p>
+                <a href="https://biblioteca.upsa.edu.bo/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblioteca.upsa.edu.bo/?section=catalogo" target="_blank">Catálogo</a>
+                <p>Universidad Autónoma Juan Misael Saracho </p>
+                <a href="https://www.uajms.edu.bo/bibliotecas/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblioteca.uajms.edu.bo/opac_css/" target="_blank">Catálogo</a>
+                <p>Universidad Católica Bolivariana – San Pablo</p>
+                <a href="http://www.bibvirtual.ucb.edu.bo/opac/" target="_blank">Biblioteca</a>
+                <p>Universidad Mayor de San Andrés – UMSA </p>
+                <a href="https://bibliotecas.umsa.bo/" target="_blank">Biblioteca</a>
+        </span>
+        <span id="brasil" class="visible">
+            <h2>Brasil</h2>
+                <p>Instituto Nacional de Pesquisas Espaciais </p>
+                <a href="http://www.inpe.br/biblioteca/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="http://bibdigital.sid.inpe.br/col/sid.inpe.br/bibdigital@80/2006/04.07.15.50.13/doc/mirror.cgi"
+                    target="_blank">Catálogo</a>
+                <p>Instituto Nacional de Telecomunicaciones</p>
+                <a href="https://www.inatel.br/biblioteca/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblioteca.inatel.br/sophia_web/" target="_blank">Catálogo</a>
+                <p>Instituto Tecnológico de Aeronáutica – ITA</p>
+                <a href="http://www.bibl.ita.br/" target="_blank">Biblioteca</a>
+                <p>Pontificia Universidad Católica de Río Grande do Sul – PUCRS/BC</p>
+                <a href="https://biblioteca.pucrs.br/" target="_blank">Biblioteca</a>
+                <br>
+                <a link="https://primo-pmtna01.hosted.exlibrisgroup.com/primo-explore/search?vid=PUC01&lang=pt_BR&fromRedirectFilter=true"
+                    target="_blank">Catálogo</a>
+                <p>Pontificia Universidad Católica de Río de Janeiro. PUC
+                </p>
+                <a href="https://www.dbd.puc-rio.br/sitenovo/bibliotecas-puc.html" target="_blank">Biblioteca</a>
+                <p>Universidad Estadual de Campinas – UNICAMP</p>
+                <a href="http://www.sbu.unicamp.br/sbu/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="http://acervus.unicamp.br/" target="_blank">Catálogo</a>
+                <p>Universidad Federal de Pernambuco – Centro de Tecnologías e Geociencias </p>
+                <a href=http://www.biblioteca.ufpe.br/pergamum/biblioteca/index.php?resolution2=1024_1"
+                    target="_blank">Biblioteca </a>
+                <p>Universidad Federal de Santa Catarina – UFSC/BU </p>
+                <a href="http://portal.bu.ufsc.br/" target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://pergamum.ufsc.br/pergamum/biblioteca/index.php" target="_blank">Catálogo</a>
+                <p>Universidade do Vale do Paraíba. UNIVAP </p>
+                <a href="https://www.univap.br/universidade/nossos-diferenciais/infraestrutura/biblioteca.html"
+                    target="_blank">Biblioteca</a>
+                <br>
+                <a href="https://biblioteca.univap.br/pergamum/biblioteca/index.php?resolution2=1024_1"
+                    target="_blank">Catálogo</a>
+        </span>
+    </div>
+</body>
+
+</html>
