@@ -1,154 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
-    <title>Enlaces LibLink</title>
+  <?!= include('CSS'); ?>
 </head>
 
 <body>
-    <div id="title">
-        <h1>Enlaces instituciones del convenio ISTEC LibLink</h1>
+  <h1>
+    Convenio ISTEC LibLink
+  </h1>
+  <header>
+    <div class="dropdown d-flex justify-content-center mt-4">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="onclick" aria-expanded="false" id="historyBtn">Historial</button>
+      <div style="margin-left: 10px;"></div> <!-- Agrega un margen de 10px -->
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Seleccionar país
+      </button>
+      <div id="dropdown">
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#" id="Todas">Todas</a>
+          </li>
+          <? paises.forEach(pais => { ?>
+          <li>
+            <a class="dropdown-item" href="#" id="<?=pais?>">
+              <?=pais?>
+            </a>
+          </li>
+          <? }); ?>
+        </ul>
+      </div>
     </div>
-    <form name="country">
-        <select name="pais" id="pais">
-            <option value="argentina">Argentina</option>
-            <option value="bolivia">Bolivia</option>
-            <option value="brasil">Brasil</option>
-            <option value="chile">Chile</option>
-            <option value="colombia">Colombia</option>
-            <option value="costa rica">Costa Rica</option>
-            <option value="ecuador">Ecuador</option>
-            <option value="el salvador">El Salvador</option>
-            <option value="españa">España</option>
-            <option value="estados unidos">Estados Unidos</option>
-            <option value="honduras">Honduras</option>
-            <option value="mexico">México</option>
-            <option value="nicaragua">Nicaragua</option>
-            <option value="panama">Panama</option>
-            <option value="paraguay">Paraguay</option>
-            <option value="peru">Perú</option>
-            <option value="puerto rico">Puerto Rico</option>
-            <option value="republica dominica">Republica Dominica</option>
-            <option value="uruguay">Uruguay</option>
-            <option value="venezuela">venezuela</option>
-        </select>
-        <input type=button value="Buscar" onclick="muestra()">
-    </form>
-    <div id="headercontainer">
-    </div>
-    <br>
-    <div id="tablecontainer">
-        <span id="argentina" class="oculto">
-            <h2>Argentina</h2>
-                <p>Comisión Nacional de Energía Atómica. CNEA</p>
-                <a href="http://biblioteca.cab.cnea.gov.ar/" target="_blank">Biblioteca</a>
-                <br>
-                <p>Universidad Abierta Interamericana -UAI-</p>
-                <a href="https://biblioteca.vaneduc.edu.ar/#/" target="_blank">Biblioteca</a>
-                </br>
-                <p>Universidad Blas Pascal. UBP</p>
-                <a href="https://www.ubp.edu.ar/biblioteca/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblio.ubp.edu.ar/" target="_blank">Catálogo</a>
-                <br>
-                <p>Universidad Nacional de La Plata. UNLP </p>
-                <a href="http://opac.biblio.unlp.edu.ar/opac/cgi-bin/pgopac.cgi?form=Default">Biblioteca</a>
-                <br>
-                <p>Universidad Nacional del Noroeste de la Provincia de Buenos Aires UNNOBA</p>
-                <a href="http://biblioteca.unnoba.edu.ar/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="http://biblioteca.unnoba.edu.ar/cgi-bin/koha/opac-main.pl" target="_blank">Catálogo</a>
-                <br>
-                <p>Universidad Nacional de las Misiones (UNaM), Facultad de humanidades y ciencias
-                    sociales </p>
-                <a href="https://opac.fhycs.unam.edu.ar/" target="_blank">Biblioteca</a>
-                <br>
-                <p>Facultad de ciencias exactas, químicas y naturales </p>
-                <a href="https://www.fceqyn.unam.edu.ar/biblioteca/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblio-opac.fceqyn.unam.edu.ar/" target="_blank">Catálogo</a>
-                <br>
-                <p>Facultad de ingeniería</p>
-                <a href="https://biblioteca.fio.unam.edu.ar/cgi-bin/koha/opac-search.pl" target="_blank">Biblioteca</a>
-                <p>Facultad de Artes</p>
-                <a href="https://biblioteca.fio.unam.edu.ar/cgi-bin/koha/opac-main.pl" target="_blank">Biblioteca</a>
-                <br>
-                <p>Facultad de Ciencias de la Salud</p>
-                <a href="http://bvs.escenf.unam.edu.ar/" target="_blank">Biblioteca</a>
-                <br>
-                <p>Universidad de Palermo -UP-</p>
-                <a href="https://www.palermo.edu/biblioteca/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="http://biblio.palermo.edu/EOSWebOPAC/OPAC/Index.aspx" target="_blank">Catálogo</a>
-                <br>
-                <p>Universidad Tecnológica Nacional UTN</p>
-                <a href="https://biblioteca.frba.utn.edu.ar/opac_principal_sin_log.php" target="_blank">Biblioteca</a>
-        </span>
-        <span id="bolivia" class="oculto">
-            <h2>Bolivia</h2>
-                <p>Universidad Privada Santa Cruz de la Sierra </p>
-                <a href="https://biblioteca.upsa.edu.bo/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblioteca.upsa.edu.bo/?section=catalogo" target="_blank">Catálogo</a>
-                <p>Universidad Autónoma Juan Misael Saracho </p>
-                <a href="https://www.uajms.edu.bo/bibliotecas/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblioteca.uajms.edu.bo/opac_css/" target="_blank">Catálogo</a>
-                <p>Universidad Católica Bolivariana – San Pablo</p>
-                <a href="http://www.bibvirtual.ucb.edu.bo/opac/" target="_blank">Biblioteca</a>
-                <p>Universidad Mayor de San Andrés – UMSA </p>
-                <a href="https://bibliotecas.umsa.bo/" target="_blank">Biblioteca</a>
-        </span>
-        <span id="brasil" class="visible">
-            <h2>Brasil</h2>
-                <p>Instituto Nacional de Pesquisas Espaciais </p>
-                <a href="http://www.inpe.br/biblioteca/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="http://bibdigital.sid.inpe.br/col/sid.inpe.br/bibdigital@80/2006/04.07.15.50.13/doc/mirror.cgi"
-                    target="_blank">Catálogo</a>
-                <p>Instituto Nacional de Telecomunicaciones</p>
-                <a href="https://www.inatel.br/biblioteca/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblioteca.inatel.br/sophia_web/" target="_blank">Catálogo</a>
-                <p>Instituto Tecnológico de Aeronáutica – ITA</p>
-                <a href="http://www.bibl.ita.br/" target="_blank">Biblioteca</a>
-                <p>Pontificia Universidad Católica de Río Grande do Sul – PUCRS/BC</p>
-                <a href="https://biblioteca.pucrs.br/" target="_blank">Biblioteca</a>
-                <br>
-                <a link="https://primo-pmtna01.hosted.exlibrisgroup.com/primo-explore/search?vid=PUC01&lang=pt_BR&fromRedirectFilter=true"
-                    target="_blank">Catálogo</a>
-                <p>Pontificia Universidad Católica de Río de Janeiro. PUC
-                </p>
-                <a href="https://www.dbd.puc-rio.br/sitenovo/bibliotecas-puc.html" target="_blank">Biblioteca</a>
-                <p>Universidad Estadual de Campinas – UNICAMP</p>
-                <a href="http://www.sbu.unicamp.br/sbu/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="http://acervus.unicamp.br/" target="_blank">Catálogo</a>
-                <p>Universidad Federal de Pernambuco – Centro de Tecnologías e Geociencias </p>
-                <a href=http://www.biblioteca.ufpe.br/pergamum/biblioteca/index.php?resolution2=1024_1"
-                    target="_blank">Biblioteca </a>
-                <p>Universidad Federal de Santa Catarina – UFSC/BU </p>
-                <a href="http://portal.bu.ufsc.br/" target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://pergamum.ufsc.br/pergamum/biblioteca/index.php" target="_blank">Catálogo</a>
-                <p>Universidade do Vale do Paraíba. UNIVAP </p>
-                <a href="https://www.univap.br/universidade/nossos-diferenciais/infraestrutura/biblioteca.html"
-                    target="_blank">Biblioteca</a>
-                <br>
-                <a href="https://biblioteca.univap.br/pergamum/biblioteca/index.php?resolution2=1024_1"
-                    target="_blank">Catálogo</a>
-        </span>
-    </div>
+  </header>
+  <main class="main-container container w-75 mt-4">
+    <div class="container">
+      <div class="row" id="main-content">
+        <? var data = showFilteredData("Todas"); ?>
+        <h2 style="text-align:center;">Todas</h2>
+        <? for (var i = 0; i < data.length; i++) { ?>
+        <div class='card m-3 col-md-6 mx-auto my-4' style='width: 25%'>
+          <div class='card-body'>
+            <h5 class='card-title'>
+              <?=data[i][1]?>
+            </h5>
+            <a class="enlaces" href="<?= data[i][2] ?>" target='_blank'
+              id="<?= data[i][0] ?>_<?= data[i][1]?>_universidad"> Universidad </a>
+            <a class="enlaces" href="<?=data[i][3]?>" target='_blank' style="margin-left:5%;"
+              id="<?= data[i][0] ?>_<?= data[i][1]?>_catalogo"> Catálogo </a>
+            <br>
+            <p class='card-text'>Institución universitaria de
+              <?=data[i][0]?> que hace parte del convenio Istec Liblink
+            </p>
+          </div>
+        </div>
+        <? } ?>
+  </main>
+  <?!=include('JS'); ?>
 </body>
 
 </html>
