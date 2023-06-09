@@ -1,35 +1,81 @@
-// function visit(e) {
-//   var link = e.getAttribute("link");
-//   window.open(link, "_blank");
-//   var last = document.querySelector(".lastvisitedbutton");
-//   if (last) last.className = "visitedbutton";
-//   e.className = "lastvisitedbutton";
-// }
-// function copy(e) {
-//   var copy = e.parentElement.firstChild;
-//   navigator.clipboard.writeText(copy.innerHTML);
-// }
-
-function paisEscogido() {
-    var indice;
-    indice = document.country.pais.selectedIndex;
-    var pais;
-    pais = document.country.pais.options[indice].value;
-    return pais;
+<style>
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    /* font-family: 'Roboto Slab', serif; */
+    /* color: green; */
   }
-  
-  function muestra() {
-    console.log(document.getElementById("tablecontainer"));
-    seleccion = paisEscogido();
-    for (let index = 0; index < document.country.pais.length; index++) {
-      if (document.country.pais.options[index].value == seleccion) {
-        var elemento = document.getElementById(seleccion);
-        elemento.className = "visible";
-      } else {
-        otro = document.country.pais.options[index].value
-        var enlace = document.getElementById(otro);
-        enlace.className = "oculto";
-      }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #main-content {
+    width: 102%
+  }
+
+
+  .dropdown-menu {
+    background-color: #f8f9fa;
+    border: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: #e9ecef;
+  }
+
+  .main-container {
+    background-color: #f8f9fa;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+
+    /* Estilos para pantallas más pequeñas que 768 píxeles de ancho */
+    body {
+      font-size: 14px;
     }
   }
-  
+
+  @media (min-width: 768px) {
+
+    /* Estilos para pantallas de 768 píxeles de ancho o más */
+    body {
+      font-size: 16px;
+    }
+  }
+
+  .linkbutton {
+    background-color: white;
+    color: #000000;
+    /* Green UdeA */
+    border: 3px solid #285817;
+    /* Green UdeA */
+
+  }
+
+  .visitedbutton {
+
+    background-color: #CAF0F8;
+    color: #000000;
+    border: 3px solid #0096C7;
+    /* Green UdeA */
+
+  }
+
+  .lastvisitedbutton {
+
+    background-color: #FBE4D5;
+    color: #000000;
+    border: 3px solid #FB8500;
+    /* Green UdeA */
+  }
+</style>

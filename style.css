@@ -52,4 +52,30 @@
       font-size: 16px;
     }
   }
+
+  .linkbutton {
+    background-color: white;
+    color: #000000;
+    /* Green UdeA */
+    border: 3px solid #285817;
+    /* Green UdeA */
+
+  }
+
+  .visitedbutton {
+
+    background-color: #CAF0F8;
+    color: #000000;
+    border: 3px solid #0096C7;
+    /* Green UdeA */
+
+  }
+
+  .lastvisitedbutton {
+
+    background-color: #FBE4D5;
+    color: #000000;
+    border: 3px solid #FB8500;
+    /* Green UdeA */
+  }
 </style>
